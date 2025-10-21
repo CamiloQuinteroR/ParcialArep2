@@ -71,3 +71,8 @@ Funciona correctamente y recibe la solicitud de forma correcta como se ve a cont
 
 <img width="556" height="417" alt="image" src="https://github.com/user-attachments/assets/4a5f3525-63b0-4a2c-a262-070e491f5639" />
 
+## Video
+En el video se muestran las instancia creadas corriendo, los ejecutbales correindo en cada instancia y finalmente la pagina con la ip del proxy funcionando de forma correcta:
+
+https://youtu.be/1b81OojJRac
+
