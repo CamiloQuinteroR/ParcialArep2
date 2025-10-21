@@ -4,6 +4,8 @@
  */
 package com.example.examArep;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,21 +22,60 @@ public class FactoresController {
     @GetMapping("/primes")
     public String primes(@RequestParam("value") String value){
         int valor = Integer.parseInt(value);
-        return "primes";
+        return formatJson("primos","value",primos(valor));
+   
     }
     
     @GetMapping("/factors")
     public String factors(@RequestParam("value") String value){
         int valor = Integer.parseInt(value);
-        return "factors";
+        return formatJson("factors","value",factores(valor));
+        
     }
     
-    public static String primo(int value){
-        return "";
+    public static String primos(int value){
+        List<Integer> primos = new ArrayList<>();
+        primos.add(1);
+        for (int i = 1; i<=value; i++){
+            if(len(listaFactores(i))==2){
+                primos.add(i);
+            }
+        }
+        return primos.toString();
     }
     
+    
+    public static int len(List<Integer> lista){
+        int i = 0;
+        for(int inter: lista){
+            i = i + 1;
+        } 
+        return i;
+    }
+    
+    public static List<Integer> listaFactores(int value){
+        List<Integer> factors = new ArrayList<>();
+        for (int i = 1; i<=value; i ++){
+                int modulo = value % i;
+                System.out.print(String.valueOf(modulo));
+                if(modulo == 0){
+                    factors.add(i);
+                }
+                
+            }
+        return factors;
+    }
     public static String factores(int value){
-        return "";
+        List<Integer> factors = new ArrayList<>();
+        for (int i = 1; i<=value; i ++){
+                int modulo = value % i;
+                System.out.print(String.valueOf(modulo));
+                if(modulo == 0){
+                    factors.add(i);
+                }
+                
+            }
+        return factors.toString();
     }
     public static String formatJson(String operation, String input, String output){
         return "{\n"
