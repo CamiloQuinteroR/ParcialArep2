@@ -1,3 +1,8 @@
+
+## Explicación del proyecto:
+
+En el repositorio se encuentran tres directorios, un mathservice1, mathservice2 y proxy, los dos servicios mathservice, fueron desplegados en dos instancia ec2 cada uno, proxy tambien fue desplegado como se muestra a continuación, en el proxy redirige las peteciones de nuestro front hacia cada instancia ec2 con un servicio mathService, esto gracias al controlador que estpá codificado en el proxy, cada mathService regresa una respuesta en formato json. Como se evidenciará en el código, tanto mathservice1 como mathservice2 son exactamente iguales, lo unico que cambia es el puerto por donde corren. 
+
 ## Despelgamos las instancia  ec2, en este caso, desplegué tres isntancia una para service1, otra para sercvice2 y finalmente una para el proxy
 
 Podemos ver que estan corriendo las instancia mencionadas:
