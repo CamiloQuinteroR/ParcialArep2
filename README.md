@@ -15,8 +15,8 @@ ssh -i "proxy.pem" ec2-user@ec2-18-232-176-11.compute-1.amazonaws.com
 Al service1
 
 ssh -i "service1.pem" ec2-user@ec2-98-88-20-154.compute-1.amazonaws.com
-Al service2
 
+Al service2
 ssh -i "service2.pem" ec2-user@ec2-100-24-38-215.compute-1.amazonaws.com
 
 
